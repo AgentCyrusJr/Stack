@@ -1,0 +1,54 @@
+=======================My Code=======================
+//Using ArrayDeque
+class MyStack {
+	  Deque<Integer> stack = new ArrayDeque<Integer>();
+    // Push element x onto stack.
+    public void push(int x) {
+        stack.push(x);
+    }
+
+    // Removes the element on top of the stack.
+    public void pop() {
+    	if(stack.isEmpty() != true){
+    		stack.pop();
+    	}
+    }
+
+    // Get the top element.
+    public int top() {
+    	if(stack.isEmpty() != true){
+    		return stack.getFirst();
+    	}
+    	else
+    		return -1;
+    }
+
+    // Return whether the stack is empty.
+    public boolean empty() {
+        return stack.isEmpty();
+    }
+}
+
+======================================
+//Using LinkedList
+public class MyStack {
+        private LinkedList ll = new LinkedList();
+        public void push(Object obj){
+            // Add the element at the top of LinkedList
+            ll.addFirst(obj);
+        }
+        public Object pop(){
+            // Remove the first element of LinkedList
+            return ll.removeFirst();
+        }
+        public Object peek(){
+            // Return the first element of LinkedList, but not remove it
+            return ll.getFirst();
+        }
+        public boolean empty(){
+            return ll.isEmpty();
+        }
+}
+
+
+
